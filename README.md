@@ -1,6 +1,6 @@
 # MetaTrader4
 
-## Landing Page by layout with Figma
+## [Site]()
 
 ## Description.
 
@@ -60,5 +60,3 @@
 
 `npm run build`
 `npm run deploy`
-
-The site will be available at: https://<your-username>.github.io/<repo-name>
