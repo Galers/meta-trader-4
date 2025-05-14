@@ -1,0 +1,111 @@
+@use '../helpers' as *;
+@use '../variables' as *;
+
+.hero {
+  background: rgba($violet-00, 0.1);
+  margin-bottom: 5rem;
+
+  @include onTablet {
+    background: rgba($violet, 0.1);
+    margin-bottom: 7.5rem;
+  }
+
+  @include onDesktop {
+    margin-bottom: 8.75rem;
+  }
+
+  &__container {
+    padding-block: 2rem 1rem;
+    @include container;
+
+    @include onTablet {
+      justify-content: center;
+      padding-block: 2.5rem 1.5rem;
+    }
+
+    @include onDesktop {
+      padding-block: 6.25rem;
+      justify-content: flex-start;
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    row-gap: 2rem;
+
+    @include onDesktop {
+      flex-direction: row;
+      width: 100%;
+      justify-content: space-between;
+    }
+  }
+
+  &__text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @include onDesktop {
+      align-items: flex-start;
+    }
+  }
+
+  &__title {
+    margin-bottom: 1.5rem;
+    @include onTablet {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+    @include onDesktop {
+      text-align: start;
+    }
+  }
+
+  &__description {
+    font-family: var(--font-family-accent);
+    margin-bottom: 2rem;
+    color: $gray-50;
+    @include paragraph;
+    @include onTablet {
+      text-align: center;
+      max-width: 508px;
+      margin-bottom: 48px;
+    }
+    @include onDesktop {
+      text-align: start;
+    }
+  }
+
+  &__start-trading {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 280px;
+    height: 50px;
+    line-height: $lineHeightAdditionalSmall;
+    letter-spacing: 0.03em;
+
+    @include onTablet {
+      width: 257px;
+    }
+  }
+
+  &__image {
+    &-placeholder {
+      text-align: center;
+    }
+
+    &-img {
+      @include onTablet {
+        width: 418px;
+        height: 450px;
+      }
+
+      @include onDesktop {
+        width: 482px;
+        height: 519px;
+      }
+    }
+  }
+}

@@ -1,0 +1,43 @@
+@use '../helpers' as *;
+@use '../variables' as *;
+
+.input {
+  font-family: var(--font-family-accent);
+  border: $border-default;
+  border-radius: 3px;
+  padding: 7px 1rem;
+  @include paragraph($text-16);
+  @include transition(border);
+
+  &::placeholder {
+    color: $gray-100;
+  }
+
+  &:focus {
+    border: $border-focus;
+    outline: none;
+  }
+
+  &:disabled {
+    background-color: $gray-150;
+    cursor: not-allowed;
+  }
+
+  @include hover {
+    border: $border-focus;
+  }
+
+  &--error {
+    border: $border-error;
+  }
+
+  &:valid,
+  &:valid {
+    border-color: $success;
+
+    + .contact__error {
+      visibility: hidden;
+      opacity: 0;
+    }
+  }
+}

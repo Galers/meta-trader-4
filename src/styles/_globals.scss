@@ -1,0 +1,63 @@
+@use 'variables' as *;
+@use 'helpers' as *;
+
+body {
+  display: flex;
+  flex-direction: column;
+  font-family: var(--font-family-base);
+  color: $gray-00;
+  background-color: $white;
+  font-weight: $fontWeightBold;
+
+  &.no-scroll {
+    overflow: hidden;
+  }
+}
+
+body {
+  height: auto;
+  overflow-x: hidden;
+}
+
+main {
+  flex-grow: 1;
+}
+
+h1,
+h2 {
+  font-size: $text-40;
+  line-height: $lineHeightAdditionalLarge;
+}
+
+h3,
+h4 {
+  line-height: $lineHeightTight;
+}
+
+h1 {
+  @include onTablet {
+    font-size: $text-64;
+  }
+}
+
+h2 {
+  @include onTablet {
+    font-size: $text-56;
+  }
+}
+
+h3 {
+  font-size: $text-24;
+}
+
+h4 {
+  font-size: $text-18;
+  @include onTablet {
+    font-size: $text-24;
+  }
+}
+
+h5 {
+  font-size: $text-18;
+  line-height: $lineHeightRegular;
+}

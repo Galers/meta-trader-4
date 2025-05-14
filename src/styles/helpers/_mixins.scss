@@ -1,0 +1,80 @@
+@use 'sass:map';
+@use 'sass:list';
+@use './media' as *;
+@use './_functions.scss' as *;
+@use '../variables' as *;
+
+@mixin onTablet {
+  @media (min-width: map.get($breakpoints, tablet)) {
+    @content;
+  }
+}
+
+@mixin onDesktop {
+  @media (min-width: map.get($breakpoints, desktop)) {
+    @content;
+  }
+}
+
+@mixin hide {
+  opacity: 0;
+  visibility: hidden;
+}
+
+@mixin show {
+  opacity: 1;
+  visibility: visible;
+}
+
+@mixin container {
+  display: flex;
+  width: 100%;
+  padding-inline: 20px;
+
+  @include onTablet {
+    padding-inline: 40px;
+  }
+
+  @include onDesktop {
+    padding-inline: 120px;
+  }
+}
+
+@mixin paragraph($fontSize: $text-18) {
+  font-size: $fontSize;
+  font-weight: $fontWeightRegular;
+  line-height: $lineHeightRegular;
+}
+
+@mixin transition($transitions...) {
+  @if list.length($transitions) == 0 {
+    $transitions: ('all 0.3s ease-in-out');
+  }
+
+  $unfoldedTransitions: ();
+
+  @each $transition in $transitions {
+    $unfoldedTransitions: list.append(
+      $unfoldedTransitions,
+      unfoldTransition($transition),
+      comma
+    );
+  }
+
+  & {
+    transition: $unfoldedTransitions;
+  }
+}
+
+@mixin visually-hidden {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  margin: -1px !important;
+  border: 0 !important;
+  padding: 0 !important;
+  white-space: nowrap !important;
+  clip-path: inset(100%) !important;
+  clip: rect(0 0 0 0) !important;
+  overflow: hidden !important;
+}

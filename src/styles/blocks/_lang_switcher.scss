@@ -1,0 +1,51 @@
+@use '../helpers' as *;
+@use '../variables' as *;
+
+.lang-switcher {
+  position: relative;
+  display: inline-block;
+
+  &__btn {
+    font-weight: $fontWeightBold;
+    font-size: $text-15;
+    width: 5rem;
+    padding: 9px 0.875rem;
+    border: 1px solid $black;
+    border-radius: 3.75rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: currentColor;
+    cursor: pointer;
+  }
+
+  &__list {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: $white;
+    border: 1px solid $black;
+    border-radius: 0.5rem;
+    margin-top: 0.25rem;
+    display: none;
+    z-index: 10;
+    padding-block: 0.25rem;
+
+    &.active {
+      display: block;
+    }
+  }
+
+  &__item {
+    padding: 0.375rem 0.75rem;
+    cursor: pointer;
+    @include transition(background-color);
+    @include hover {
+      background-color: $gray-150;
+    }
+
+    &.active {
+      font-weight: bold;
+    }
+  }
+}

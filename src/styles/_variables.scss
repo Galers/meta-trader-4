@@ -1,0 +1,57 @@
+:root {
+  --font-family-base: 'MuseoSansCyrl', sans-serif;
+  --font-family-accent: 'Montserrat', sans-serif;
+}
+
+/* Common */
+$black: #000000;
+$white: #ffffff;
+
+/* Status */
+$error: #eb5757;
+$success: #0eac00;
+
+/* Violet */
+$violet: #6248ff;
+$violet-00: #4f62f6;
+$violet-50: #354bf4;
+$violet-hover: #7181fc;
+
+/* Gray */
+$gray-00: #333333;
+$gray-50: #4f4f4f;
+$gray-100: #828282;
+$gray-150: #e0e0e0;
+
+/* Font Weight */
+$fontWeightRegular: 400;
+$fontWeightSemiBold: 600;
+$fontWeightBold: 700;
+$fontWeightBlack: 900;
+
+/* Font Size */
+$text-14: 0.875rem;
+$text-15: 15px;
+$text-16: 1rem;
+$text-18: 1.125rem;
+$text-24: 1.5rem;
+$text-40: 2.5rem;
+$text-56: 3.5rem;
+$text-64: 4rem;
+
+/* Line Height */
+$lineHeightAdditionalSmall: 0.87;
+$lineHeightTight: 1;
+$lineHeightAdditionalLarge: 1.1;
+$lineHeightRegular: 1.6;
+
+/* Transition */
+$transitionDuration: 0.3s;
+
+/* Border */
+$border-violet: 2px solid $violet;
+$border-00: 2px solid $violet-00;
+$border-default: 1px solid $gray-150;
+$border-focus: 1px solid $gray-100;
+$border-error: 1px solid $error;
+$border-success: 1px solid $success;

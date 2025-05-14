@@ -1,0 +1,153 @@
+@use '../helpers' as *;
+@use '../variables' as *;
+
+.slider {
+  margin-bottom: 5rem;
+
+  @include onTablet {
+    margin-bottom: 7.5rem;
+  }
+
+  @include onDesktop {
+    margin-bottom: 8.75rem;
+  }
+
+  &__container {
+    @include container;
+  }
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    @include onDesktop {
+      position: relative;
+      flex-direction: row;
+      gap: 8.25rem;
+    }
+  }
+
+  &__title {
+    max-width: 280px;
+    margin-bottom: 2.5rem;
+
+    @include onTablet {
+      max-width: 508px;
+      margin-bottom: 0.5rem;
+    }
+
+    @include onDesktop {
+      margin-bottom: 0;
+    }
+  }
+
+  &__highlight {
+    background: rgba($violet-00, 0.1);
+
+    @include onTablet {
+      background: none;
+      position: relative;
+
+      &::after {
+        content: '';
+        position: absolute;
+        background: rgba($violet, 0.1);
+        top: 68px;
+        right: 168px;
+        width: 168px;
+        height: 72px;
+      }
+    }
+
+    @include onDesktop {
+      &::after {
+        right: -44px;
+        width: 380px;
+      }
+    }
+  }
+
+  &__nav {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    order: 2;
+    top: -32px;
+
+    @include onTablet {
+      order: 0;
+      top: 204px;
+      justify-content: center;
+      gap: 36rem;
+    }
+
+    @include onDesktop {
+      position: absolute;
+      top: 174px;
+      gap: 1rem;
+    }
+  }
+
+  &__arrow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid $violet;
+
+    border-radius: 50%;
+    height: 3rem;
+    width: 3rem;
+    cursor: pointer;
+    @include transition(transform, border-color);
+
+    &-icon {
+      width: 100%;
+    }
+
+    &:focus {
+      border: 1px solid $violet;
+      outline: none;
+    }
+
+    @include hover {
+      &:not(:disabled) {
+        transform: scale(1.1);
+      }
+    }
+
+    &:disabled {
+      cursor: not-allowed;
+      border-color: $gray-150;
+    }
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: 1fr;
+
+    @include onTablet {
+      width: 508px;
+      margin-inline: auto;
+    }
+
+    @include onDesktop {
+      margin-top: 1.688rem;
+      margin-inline: 0;
+    }
+  }
+
+  &__item {
+    display: none;
+
+    &.testimonial--active {
+      display: block;
+
+      @include onDesktop {
+        max-height: 255px;
+        height: 100%;
+      }
+    }
+  }
+}

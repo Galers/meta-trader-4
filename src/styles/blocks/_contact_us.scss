@@ -1,0 +1,239 @@
+@use '../helpers' as *;
+@use '../variables' as *;
+
+.contact {
+  background: rgba($violet-00, 0.1);
+
+  @include onTablet {
+    background: rgba($violet, 0.1);
+  }
+
+  &__container {
+    padding-block: 3rem;
+    @include container;
+
+    @include onTablet {
+      padding-inline: 8.125rem;
+    }
+
+    @include onDesktop {
+      padding-inline: 7.5rem;
+      padding-block: 7.5rem;
+    }
+  }
+
+  &__wrapper {
+    display: flex;
+    row-gap: 3rem;
+    flex-direction: column;
+
+    @include onTablet {
+      max-width: 508px;
+      margin-inline: auto;
+    }
+
+    @include onDesktop {
+      max-width: none;
+      margin-inline: 0;
+      flex-direction: row;
+      justify-content: center;
+      width: 100%;
+      gap: 8.25rem;
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1.5rem;
+
+    @include onTablet {
+      row-gap: 2rem;
+    }
+    @include onDesktop {
+      width: 483px;
+    }
+  }
+
+  &__info {
+    font-style: normal;
+    color: $gray-50;
+
+    &-wrapper {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+
+      .contact__text {
+        @include transition(color);
+        @include hover {
+          color: $violet-hover;
+        }
+      }
+    }
+  }
+
+  &__description {
+    font-family: var(--font-family-accent);
+    margin-bottom: 1.5rem;
+    @include paragraph;
+
+    @include onTablet {
+      margin-bottom: 2rem;
+    }
+
+    @include onDesktop {
+      margin-bottom: 3rem;
+    }
+  }
+
+  &__text {
+    font-family: var(--font-family-accent);
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    @include paragraph($text-16);
+
+    &--spaced {
+      margin-bottom: 17px;
+
+      @include onTablet {
+        margin-bottom: 1.5rem;
+      }
+    }
+
+    &--bold {
+      font-family: var(--font-family-base);
+      font-weight: $fontWeightBold;
+      font-size: $text-15;
+      line-height: $lineHeightTight;
+      color: $gray-00;
+    }
+  }
+
+  &__form {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 3rem;
+    padding: 3rem 1rem;
+    border: $border-00;
+    border-radius: 1.25rem;
+    background-color: $white;
+
+    @include onTablet {
+      border-color: $violet;
+      padding: 5rem 42px;
+      row-gap: 2.5rem;
+    }
+
+    @include onDesktop {
+      flex: auto;
+      padding: 5rem;
+      max-width: 585px;
+    }
+
+    &-group {
+      display: flex;
+      flex-direction: column;
+      row-gap: 1.5rem;
+      max-width: 425px;
+      width: 100%;
+    }
+  }
+
+  &__field {
+    position: relative;
+  }
+
+  &__error {
+    position: absolute;
+    font-size: $text-15;
+    line-height: $lineHeightTight;
+    color: $error;
+    visibility: hidden;
+    opacity: 0;
+    top: 44px;
+    left: 0;
+    @include transition(visibility, opacity);
+
+    &-textarea {
+      top: 148px;
+    }
+
+    &--visible {
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+
+  &__notification {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    display: flex;
+    align-items: flex-start;
+    transform: translateX(-50%) translateY(-100%);
+    background-color: $success;
+    color: $white;
+    padding: 1rem 2rem;
+    width: 280px;
+    border-radius: 0 0 6px 6px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    @include transition(transform 0.4s, opacity 0.4s, visibility 0.4s);
+
+    strong {
+      margin-right: 4px;
+    }
+
+    &--visible {
+      transform: translateX(-50%) translateY(0);
+      opacity: 1;
+      visibility: visible;
+    }
+
+    &-btn {
+      background: transparent;
+      border: none;
+      color: $white;
+      font-size: 1.5rem;
+      line-height: 1;
+      padding-left: 1rem;
+      cursor: pointer;
+    }
+  }
+
+  &__input,
+  &__textarea {
+    max-width: 425px;
+    width: 100%;
+
+    &:invalid:not(:placeholder-shown) + .contact__error,
+    &:invalid:not(:placeholder-shown) + .contact__error {
+      visibility: visible;
+      opacity: 1;
+    }
+
+    &:invalid:not(:placeholder-shown) {
+      border-color: $error;
+    }
+  }
+
+  &__textarea {
+    resize: none;
+    width: 100%;
+  }
+
+  &__label {
+    @include visually-hidden;
+  }
+
+  &__button {
+    width: 172px;
+    height: 54px;
+  }
+}

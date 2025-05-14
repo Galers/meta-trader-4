@@ -1,0 +1,202 @@
+@use '../helpers' as *;
+@use '../variables' as *;
+
+.started {
+  margin-bottom: 5rem;
+
+  @include onTablet {
+    margin-bottom: 7.5rem;
+  }
+
+  @include onDesktop {
+    margin-bottom: 8.75rem;
+  }
+
+  &__container {
+    @include container;
+  }
+
+  &__title {
+    margin-bottom: 2.5rem;
+    text-wrap: balance;
+
+    @include onTablet {
+      max-width: 436px;
+      margin-bottom: 3.5rem;
+    }
+
+    @include onDesktop {
+      max-width: 494px;
+      margin-bottom: 3.75rem;
+      text-wrap: auto;
+    }
+  }
+
+  &__highlight {
+    position: relative;
+    &::after {
+      content: '';
+      position: absolute;
+      top: 4px;
+      left: 0;
+      width: 214px;
+      height: 50px;
+      background: rgba($violet-00, 0.1);
+      z-index: -1;
+    }
+
+    @include onTablet {
+      &::after {
+        background: rgba($violet, 0.1);
+        top: 32px;
+        left: -60px;
+        width: 377px;
+        height: 37px;
+      }
+    }
+
+    @include onDesktop {
+      &::after {
+        top: 4px;
+        left: 0;
+        width: 296px;
+        height: 72px;
+      }
+    }
+  }
+
+  &__steps {
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 1.5rem;
+    position: relative;
+
+    @include onTablet {
+      display: grid;
+      justify-content: center;
+      align-items: center;
+      grid-template-columns: repeat(2, minmax(329px, 483px));
+      grid-template-rows: repeat(3, 263px);
+      column-gap: 1.875rem;
+      row-gap: 0;
+    }
+
+    @include onDesktop {
+      column-gap: 8.25rem;
+    }
+  }
+
+  &__lines {
+    display: none;
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
+
+    @include onTablet {
+      display: block;
+    }
+  }
+
+  &__line {
+    position: absolute;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 380px;
+    height: 73px;
+    &--1 {
+      background-image: url('/public/line-right.svg');
+      top: 17%;
+      left: 23%;
+      @include onDesktop {
+        left: 44%;
+      }
+    }
+    &--2 {
+      background-image: url('/public/line-left.svg');
+      top: 40%;
+      right: 18%;
+      @include onDesktop {
+        top: 35%;
+        right: 43%;
+      }
+    }
+    &--3 {
+      background-image: url('/public/line-right.svg');
+      top: 61%;
+      left: 23%;
+      @include onDesktop {
+        top: 56%;
+        left: 44%;
+      }
+    }
+  }
+
+  &__step {
+    position: relative;
+    border: $border-00;
+    border-radius: 1.875rem;
+    padding: 1.5rem;
+    min-width: 280px;
+    z-index: 1;
+    background: $white;
+
+    @include onTablet {
+      padding: 2rem;
+      border: $border-violet;
+      max-width: 483px;
+      @include transition(transform);
+
+      &--1 {
+        grid-column: 1;
+        grid-row: 1;
+      }
+      &--2 {
+        grid-column: 2;
+        grid-row: 1;
+        transform: translateY(169px);
+        @include onDesktop {
+          transform: translateY(156px);
+        }
+      }
+      &--3 {
+        grid-column: 1;
+        grid-row: 2;
+        transform: translateY(83px);
+        @include onDesktop {
+          transform: translateY(50px);
+        }
+      }
+      &--4 {
+        grid-column: 2;
+        grid-row: 3;
+
+        @include onDesktop {
+          transform: translateY(-48px);
+        }
+      }
+    }
+
+    &-number {
+      display: inline-block;
+      font-size: $text-15;
+      margin-bottom: 0.5rem;
+      color: $violet-00;
+
+      @include onTablet {
+        color: $violet;
+      }
+    }
+
+    &-title {
+      margin-bottom: 1.5rem;
+    }
+
+    &-description {
+      font-family: var(--font-family-accent);
+
+      @include paragraph($text-16);
+      color: $gray-50;
+    }
+  }
+}

@@ -1,0 +1,845 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Trade with confidence using MetaTrader 4 – the world's most popular trading platform. Register, verify, deposit, and start trading with Big Invest in minutes. Secure, easy, and profitable."
+    />
+    <title>Meta trader 4</title>
+    <link rel="stylesheet" href="./src/styles/main.scss" />
+    <script src="./src/scripts/main.js" type="module" defer></script>
+  </head>
+  <body>
+    <header class="header" data-header id="home" role="banner">
+      <div class="header__container">
+        <div class="header__logo">
+          <a
+            href="/"
+            aria-label="Home"
+            title="Home"
+            class="header__logo-link logo"
+          >
+            <img src="./assets/logo.svg" alt="" width="45" height="16" />
+          </a>
+        </div>
+
+        <div class="header__overlay" data-overlay>
+          <nav class="header__nav" role="navigation">
+            <ul class="header__list">
+              <li class="header__item">
+                <a href="#started" class="header__link">How it works</a>
+              </li>
+              <li class="header__item">
+                <a href="#hero" class="header__link">About</a>
+              </li>
+              <li class="header__item">
+                <a href="#started" class="header__link">Instructions</a>
+              </li>
+              <li class="header__item">
+                <a href="#testimonials" class="header__link">Accounts</a>
+              </li>
+              <li class="header__item">
+                <a href="#faq" class="header__link">Platforms</a>
+              </li>
+              <li class="header__item">
+                <a href="#contact" class="header__link">Contact</a>
+              </li>
+            </ul>
+          </nav>
+
+          <div class="header__wrapper">
+            <div class="header__language lang-switcher">
+              <button class="lang-switcher__btn" id="langBtn">
+                <span class="lang-switcher__text">EN</span>
+                <span class="lang-switcher__arrow">
+                  <img
+                    src="./assets/chevron-down.svg"
+                    alt=""
+                    width="20"
+                    height="20"
+                  />
+                </span>
+              </button>
+
+              <ul class="lang-switcher__list" id="langList">
+                <li data-lang="en" class="lang-switcher__item">EN</li>
+                <li data-lang="ua" class="lang-switcher__item">UA</li>
+              </ul>
+            </div>
+
+            <div class="header__auth">
+              <a id="signIn" href="#sign" class="header__login button"
+                >Sign in for free</a
+              >
+            </div>
+          </div>
+        </div>
+
+        <div class="header__auth header__auth--tablet">
+          <a href="#sign" class="header__login button">Sign in for free</a>
+        </div>
+
+        <button
+          class="header__burger-button burger-button"
+          type="button"
+          aria-label="Open menu"
+          title="Open menu"
+          data-burger
+        >
+          <span class="burger-button__line"></span>
+          <span class="burger-button__line"></span>
+          <span class="burger-button__line"></span>
+        </button>
+      </div>
+    </header>
+
+    <main class="main" role="main">
+      <section
+        class="hero"
+        id="hero"
+        aria-labelledby="hero-title"
+        role="region"
+      >
+        <div class="hero__container">
+          <div class="hero__content">
+            <div class="hero__text">
+              <h1 id="hero-title" class="hero__title">
+                Trade everywhere. <br />Invest here!
+              </h1>
+              <p class="hero__description">
+                We provide only the best trading software. The trading terminal
+                MetaTrader4 is the most popular and convenient platform for
+                access to global exchanges. You can work anywhere.
+              </p>
+              <a href="#contact" class="button hero__start-trading"
+                >Start trading</a
+              >
+            </div>
+            <div class="hero__image">
+              <div class="hero__image-placeholder">
+                <img
+                  src="./assets/graphs.svg"
+                  alt="Growth chart"
+                  class="hero__image-img"
+                  width="280"
+                  height="301"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section
+        class="started"
+        id="started"
+        aria-labelledby="started__title"
+        role="region"
+      >
+        <div class="started__container">
+          <div class="started__wrapper">
+            <h2 class="started__title">
+              Getting Started Is
+              <span class="started__highlight">Fast & Easy</span>
+            </h2>
+            <div class="started__steps">
+              <div class="started__lines">
+                <div class="started__line started__line--1"></div>
+                <div class="started__line started__line--2"></div>
+                <div class="started__line started__line--3"></div>
+              </div>
+              <div class="started__step started__step--1">
+                <span class="started__step-number">01.</span>
+                <h3 class="started__step-title">Register</h3>
+                <p class="started__step-description">
+                  Complete the simple registration to get your trading
+                  credentials.
+                </p>
+              </div>
+              <div class="started__step started__step--2">
+                <span class="started__step-number">02.</span>
+                <h3 class="started__step-title">Verification</h3>
+                <p class="started__step-description">
+                  Big Invest is required to verify your identity, upload your
+                  documents quickly and get approved in minutes.
+                </p>
+              </div>
+              <div class="started__step started__step--3">
+                <span class="started__step-number">03.</span>
+                <h3 class="started__step-title">Deposit funds</h3>
+                <p class="started__step-description">
+                  Big Invest accepts credit cards and bank wires. Just use the
+                  secure deposit form and follow the steps.
+                </p>
+              </div>
+              <div class="started__step started__step--4">
+                <span class="started__step-number">04.</span>
+                <h3 class="started__step-title">Start Trading</h3>
+                <p class="started__step-description">
+                  Once your deposit has been credited, you can begin trading
+                  instantly. In no time you will see profits rolling into your
+                  account.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section
+        class="slider"
+        id="testimonials"
+        aria-labelledby="slider__title"
+        role="region"
+      >
+        <div class="slider__container container">
+          <div class="slider__wrapper">
+            <h2 class="slider__title" id="slider__title">
+              People love <span class="slider__highlight">Big Invest</span>
+            </h2>
+
+            <div
+              class="slider__nav"
+              role="tablist"
+              aria-label="Testimonials navigation"
+              role="slider"
+            >
+              <button
+                type="button"
+                class="slider__arrow slider__arrow--prev"
+                aria-controls="slider__list"
+                aria-label="Previous testimonial"
+              >
+                <img
+                  src="./assets/arrow-left.svg"
+                  alt=""
+                  class="slider__arrow-icon"
+                  width="7"
+                  height="12"
+                />
+              </button>
+              <button
+                type="button"
+                class="slider__arrow slider__arrow--next"
+                aria-controls="slider__list"
+                aria-label="Next testimonial"
+              >
+                <img
+                  src="./assets/arrow-right.svg"
+                  alt=""
+                  class="slider__arrow-icon"
+                  width="7"
+                  height="12"
+                />
+              </button>
+            </div>
+
+            <ul
+              class="slider__list testimonials"
+              id="slider__list"
+              tabindex="0"
+              role="slider"
+            >
+              <li
+                class="slider__item testimonial testimonial--active"
+                role="group"
+                aria-roledescription="slide"
+                aria-label="Slide 1 of 4"
+              >
+                <div class="testimonial__avatar avatar">
+                  <img
+                    src="assets/avatar.webp"
+                    alt="Portrait of Albert Abello"
+                    class="avatar__img"
+                  />
+                  <p class="testimonial__author">Albert Abello</p>
+                  <p class="testimonial__position">Director of Growth</p>
+                </div>
+                <div class="testimonial__body">
+                  <blockquote class="testimonial__quote">
+                    <svg
+                      class="testimonial__quote-icon"
+                      width="35"
+                      height="30"
+                      color="currentColor"
+                      viewBox="0 0 35 30"
+                      fill="none"
+                      aria-hidden="true"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M14.373 0.5V12.7568C14.373 17.2341 13.1449 20.7926 10.9219 23.4277C8.70052 26.0609 5.52449 27.7261 1.71094 28.4902L1.11328 28.6104V21.8262L1.49707 21.7354C3.69465 21.2115 5.1912 20.1767 6.14551 18.8096C7.02517 17.5493 7.47067 15.9661 7.53906 14.1533H0.5V0.5H14.373ZM34.5 0.5V12.7568C34.4999 17.2316 33.2986 20.7904 31.0879 23.4268C28.8784 26.0616 25.7013 27.7263 21.8369 28.4902L21.2402 28.6084V21.8262L21.624 21.7354C23.8216 21.2115 25.3182 20.1767 26.2725 18.8096C27.1521 17.5493 27.5976 15.9661 27.666 14.1533H20.627V0.5H34.5Z"
+                        stroke="currentColor"
+                      />
+                    </svg>
+                    This magical product actually works! It has radically
+                    changed the way we build our audiences. Increasing new
+                    customer sales by 6× in our most mature market.
+                  </blockquote>
+                  <p class="testimonial__count">
+                    <span class="testimonial__count--violet"> 01 </span> / 04
+                  </p>
+                </div>
+              </li>
+
+              <li
+                class="slider__item testimonial"
+                role="group"
+                aria-roledescription="slide"
+                aria-label="Slide 2 of 4"
+              >
+                <div class="testimonial__avatar avatar">
+                  <img
+                    src="assets/investor-avatar.webp"
+                    alt="Portrait of Jane Smith"
+                    class="avatar__img"
+                  />
+                  <p class="testimonial__author">Jane Smith</p>
+                  <p class="testimonial__position">Investor</p>
+                </div>
+                <div class="testimonial__body">
+                  <blockquote class="testimonial__quote">
+                    <svg
+                      class="testimonial__quote-icon"
+                      width="35"
+                      height="30"
+                      color="currentColor"
+                      viewBox="0 0 35 30"
+                      fill="none"
+                      aria-hidden="true"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M14.373 0.5V12.7568C14.373 17.2341 13.1449 20.7926 10.9219 23.4277C8.70052 26.0609 5.52449 27.7261 1.71094 28.4902L1.11328 28.6104V21.8262L1.49707 21.7354C3.69465 21.2115 5.1912 20.1767 6.14551 18.8096C7.02517 17.5493 7.47067 15.9661 7.53906 14.1533H0.5V0.5H14.373ZM34.5 0.5V12.7568C34.4999 17.2316 33.2986 20.7904 31.0879 23.4268C28.8784 26.0616 25.7013 27.7263 21.8369 28.4902L21.2402 28.6084V21.8262L21.624 21.7354C23.8216 21.2115 25.3182 20.1767 26.2725 18.8096C27.1521 17.5493 27.5976 15.9661 27.666 14.1533H20.627V0.5H34.5Z"
+                        stroke="currentColor"
+                      />
+                    </svg>
+                    Big Invest has been a game-changer for our investment
+                    strategy!
+                  </blockquote>
+                  <p class="testimonial__count">
+                    <span class="testimonial__count--violet"> 02 </span> / 04
+                  </p>
+                </div>
+              </li>
+
+              <li
+                class="slider__item testimonial"
+                role="group"
+                aria-roledescription="slide"
+                aria-label="Slide 3 of 4"
+              >
+                <div class="testimonial__avatar avatar">
+                  <img
+                    src="assets/trader-avatar.webp"
+                    alt="Portrait of Sam Lee"
+                    class="avatar__img"
+                  />
+                  <p class="testimonial__author">Sam Lee</p>
+                  <p class="testimonial__position">Trader</p>
+                </div>
+                <div class="testimonial__body">
+                  <blockquote class="testimonial__quote">
+                    <svg
+                      class="testimonial__quote-icon"
+                      width="35"
+                      height="30"
+                      color="currentColor"
+                      viewBox="0 0 35 30"
+                      fill="none"
+                      aria-hidden="true"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M14.373 0.5V12.7568C14.373 17.2341 13.1449 20.7926 10.9219 23.4277C8.70052 26.0609 5.52449 27.7261 1.71094 28.4902L1.11328 28.6104V21.8262L1.49707 21.7354C3.69465 21.2115 5.1912 20.1767 6.14551 18.8096C7.02517 17.5493 7.47067 15.9661 7.53906 14.1533H0.5V0.5H14.373ZM34.5 0.5V12.7568C34.4999 17.2316 33.2986 20.7904 31.0879 23.4268C28.8784 26.0616 25.7013 27.7263 21.8369 28.4902L21.2402 28.6084V21.8262L21.624 21.7354C23.8216 21.2115 25.3182 20.1767 26.2725 18.8096C27.1521 17.5493 27.5976 15.9661 27.666 14.1533H20.627V0.5H34.5Z"
+                        stroke="currentColor"
+                      />
+                    </svg>
+                    The insights from Big Invest helped me diversify and grow my
+                    portfolio significantly.
+                  </blockquote>
+                  <p class="testimonial__count">
+                    <span class="testimonial__count--violet"> 03 </span> / 04
+                  </p>
+                </div>
+              </li>
+              <li
+                class="slider__item testimonial"
+                role="group"
+                aria-roledescription="slide"
+                aria-label="Slide 4 of 4"
+              >
+                <div class="testimonial__avatar avatar">
+                  <img
+                    src="assets/trump_avatar.webp"
+                    alt="Portrait of Sam Lee"
+                    class="avatar__img"
+                  />
+                  <p class="testimonial__author">Donald Trump</p>
+                  <p class="testimonial__position">President</p>
+                </div>
+                <div class="testimonial__body">
+                  <blockquote class="testimonial__quote">
+                    <svg
+                      class="testimonial__quote-icon"
+                      width="35"
+                      height="30"
+                      color="currentColor"
+                      viewBox="0 0 35 30"
+                      fill="none"
+                      aria-hidden="true"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M14.373 0.5V12.7568C14.373 17.2341 13.1449 20.7926 10.9219 23.4277C8.70052 26.0609 5.52449 27.7261 1.71094 28.4902L1.11328 28.6104V21.8262L1.49707 21.7354C3.69465 21.2115 5.1912 20.1767 6.14551 18.8096C7.02517 17.5493 7.47067 15.9661 7.53906 14.1533H0.5V0.5H14.373ZM34.5 0.5V12.7568C34.4999 17.2316 33.2986 20.7904 31.0879 23.4268C28.8784 26.0616 25.7013 27.7263 21.8369 28.4902L21.2402 28.6084V21.8262L21.624 21.7354C23.8216 21.2115 25.3182 20.1767 26.2725 18.8096C27.1521 17.5493 27.5976 15.9661 27.666 14.1533H20.627V0.5H34.5Z"
+                        stroke="currentColor"
+                      />
+                    </svg>
+                    We will make America strong again.
+                  </blockquote>
+                  <p class="testimonial__count">
+                    <span class="testimonial__count--violet"> 04 </span> / 04
+                  </p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="faq" id="faq" aria-labelledby="faq__title" role="region">
+        <div class="faq__container container">
+          <div class="faq__wrapper">
+            <h2 class="faq__title" id="faq__title">
+              Frequently asked <span class="faq__highlight">questions</span>
+            </h2>
+            <div class="faq__accordion" id="faq-accordion">
+              <div class="faq__item">
+                <h4 class="faq__heading">
+                  <button
+                    class="faq__trigger"
+                    id="faq-trigger-2"
+                    aria-expanded="false"
+                    aria-controls="faq-content-2"
+                  >
+                    <span class="faq__question"
+                      >How do I change my details?
+                    </span>
+                    <span class="faq__icon" aria-hidden="true"></span>
+                  </button>
+                </h4>
+                <div
+                  id="faq-content-2"
+                  class="faq__panel"
+                  role="region"
+                  aria-labelledby="faq-trigger-2"
+                  hidden
+                >
+                  <p>
+                    Log into your account, go to the profile settings, and
+                    update your details as needed.
+                  </p>
+                </div>
+              </div>
+              <div class="faq__item">
+                <h4 class="faq__heading">
+                  <button
+                    class="faq__trigger"
+                    id="faq-trigger-1"
+                    aria-expanded="false"
+                    aria-controls="faq-content-1"
+                  >
+                    <span class="faq__question"
+                      >What platforms will I be able to use?</span
+                    >
+                    <span class="faq__icon" aria-hidden="true"></span>
+                  </button>
+                </h4>
+                <div
+                  id="faq-content-1"
+                  class="faq__panel"
+                  role="region"
+                  aria-labelledby="faq-trigger-1"
+                  hidden
+                >
+                  <p>
+                    We provide only the best trading software. The trading
+                    terminal MetaTrader 4 is the most popular and convenient
+                    platform for access to global exchanges. You can work
+                    anywhere. All you need is the Internet because the necessary
+                    trading tools are already collected in one place and are
+                    available in a couple of clicks. Use only the best and
+                    develop with us!
+                  </p>
+                </div>
+              </div>
+              <div class="faq__item">
+                <h4 class="faq__heading">
+                  <button
+                    class="faq__trigger"
+                    id="faq-trigger-3"
+                    aria-expanded="false"
+                    aria-controls="faq-content-3"
+                  >
+                    <span class="faq__question"
+                      >Can I withdraw funds any time?</span
+                    >
+                    <span class="faq__icon" aria-hidden="true"></span>
+                  </button>
+                </h4>
+                <div
+                  id="faq-content-3"
+                  class="faq__panel"
+                  role="region"
+                  aria-labelledby="faq-trigger-3"
+                  hidden
+                >
+                  <p>
+                    Yes—withdrawals are processed within 24 hours via your
+                    chosen withdrawal method. Please note banking hours and
+                    weekends may affect timing.
+                  </p>
+                </div>
+              </div>
+              <div class="faq__item">
+                <h4 class="faq__heading">
+                  <button
+                    class="faq__trigger"
+                    id="faq-trigger-4"
+                    aria-expanded="false"
+                    aria-controls="faq-content-4"
+                  >
+                    <span class="faq__question"
+                      >Is customer support available 24/7?</span
+                    >
+                    <span class="faq__icon" aria-hidden="true"></span>
+                  </button>
+                </h4>
+                <div
+                  id="faq-content-4"
+                  class="faq__panel"
+                  role="region"
+                  aria-labelledby="faq-trigger-4"
+                  hidden
+                >
+                  <p>
+                    Our support team is available 24/7 via live chat and email.
+                    Phone support is available during business hours, Mon–Fri.
+                  </p>
+                </div>
+              </div>
+              <div class="faq__item">
+                <h4 class="faq__heading">
+                  <button
+                    class="faq__trigger"
+                    id="faq-trigger-5"
+                    aria-expanded="false"
+                    aria-controls="faq-content-5"
+                  >
+                    <span class="faq__question"
+                      >How do I change my details?
+                    </span>
+                    <span class="faq__icon" aria-hidden="true"></span>
+                  </button>
+                </h4>
+                <div
+                  id="faq-content-5"
+                  class="faq__panel"
+                  role="region"
+                  aria-labelledby="faq-trigger-5"
+                  hidden
+                >
+                  <p>
+                    Log into your account, go to the profile settings, and
+                    update your details as needed.
+                  </p>
+                </div>
+              </div>
+              <div class="faq__item">
+                <h4 class="faq__heading">
+                  <button
+                    class="faq__trigger"
+                    id="faq-trigger-6"
+                    aria-expanded="false"
+                    aria-controls="faq-content-6"
+                  >
+                    <span class="faq__question"
+                      >How do I change my details?
+                    </span>
+                    <span class="faq__icon" aria-hidden="true"></span>
+                  </button>
+                </h4>
+                <div
+                  id="faq-content-6"
+                  class="faq__panel"
+                  role="region"
+                  aria-labelledby="faq-trigger-6"
+                  hidden
+                >
+                  <p>
+                    Log into your account, go to the profile settings, and
+                    update your details as needed.
+                  </p>
+                </div>
+              </div>
+              <div class="faq__item">
+                <h4 class="faq__heading">
+                  <button
+                    class="faq__trigger"
+                    id="faq-trigger-7"
+                    aria-expanded="false"
+                    aria-controls="faq-content-7"
+                  >
+                    <span class="faq__question"
+                      >How do I change my details?
+                    </span>
+                    <span class="faq__icon" aria-hidden="true"></span>
+                  </button>
+                </h4>
+                <div
+                  id="faq-content-7"
+                  class="faq__panel"
+                  role="region"
+                  aria-labelledby="faq-trigger-7"
+                  hidden
+                >
+                  <p>
+                    Log into your account, go to the profile settings, and
+                    update your details as needed.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section
+        class="contact"
+        id="contact"
+        aria-labelledby="contact__title"
+        role="region"
+      >
+        <div class="contact__container container">
+          <div class="contact__wrapper">
+            <div class="contact__content">
+              <h2 class="contact__title" id="contact__title">Contact Us!</h2>
+              <address class="contact__info">
+                <p class="contact__description">
+                  The support staff and customer service are available to help
+                  you with any questions or needs you might have. Just drop us a
+                  line.
+                </p>
+                <p class="contact__text contact__text--spaced">
+                  This site is owned and operated by Kode Tech Solutions LTD.
+                </p>
+                <div class="contact__info-wrapper">
+                  <p class="contact__text">
+                    <span class="contact__text--bold">Phone:</span>
+                    <a
+                      href="tel:+442038857261"
+                      class="contact__link"
+                      aria-label="Call us at +44 20 3885 7261"
+                    >
+                      442038857261
+                    </a>
+                  </p>
+                  <p class="contact__text">
+                    <span class="contact__text--bold">Email:</span>
+                    <a
+                      href="mailto:help@google.com"
+                      class="contact__link"
+                      aria-label="Email us at help@google.com"
+                    >
+                      help@google.com
+                    </a>
+                  </p>
+                  <p class="contact__text">
+                    <span class="contact__text--bold">Address:</span>
+                    <a
+                      href="https://maps.app.goo.gl/dzQJALvhTT9nDdLfA"
+                      class="contact__link"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label="Open our location in Google Maps"
+                    >
+                      Trust Company Complex, Ajeltake Road, Ajeltake Island,
+                      Majuro, Republic of the Marshall Islands, MH 96960
+                    </a>
+                  </p>
+                </div>
+              </address>
+            </div>
+            <form class="contact__form" novalidate>
+              <div class="contact__form-group">
+                <div class="contact__field">
+                  <label for="contact-name" class="contact__label">Name</label>
+                  <input
+                    type="text"
+                    id="contact-name"
+                    name="name"
+                    class="contact__input input"
+                    placeholder="Name"
+                    required
+                  />
+                  <span class="contact__error"> Name is required </span>
+                </div>
+                <div class="contact__field">
+                  <label for="contact-email" class="contact__label"
+                    >Email</label
+                  >
+                  <input
+                    type="email"
+                    id="contact-email"
+                    name="email"
+                    class="contact__input input"
+                    placeholder="Email"
+                    required
+                  />
+                  <span class="contact__error"> Incorrect email type </span>
+                </div>
+                <div class="contact__field">
+                  <label for="contact-message" class="contact__label"
+                    >Message</label
+                  >
+                  <textarea
+                    id="contact-message"
+                    name="message"
+                    class="contact__textarea input"
+                    placeholder="Message"
+                    rows="5"
+                    required
+                  ></textarea>
+                  <span class="contact__error contact__error-textarea"
+                    >Message is required</span
+                  >
+                </div>
+              </div>
+              <button
+                type="submit"
+                class="contact__button button"
+                aria-label="Send message"
+              >
+                Send
+              </button>
+              <div class="contact__notification" role="alert" hidden>
+                <span><strong>Thank you!</strong>Your message was sent.</span>
+                <button
+                  type="button"
+                  class="contact__notification-btn"
+                  aria-label="Close notification"
+                >
+                  &times;
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer" role="contentinfo">
+      <div class="footer__container">
+        <div class="footer__wrapper">
+          <div class="footer__top">
+            <div class="footer__logo">
+              <a
+                href="#home"
+                aria-label="Home"
+                title="Home"
+                class="footer__logo-link"
+              >
+                <img
+                  src="./assets/logo.svg"
+                  alt="Main logo"
+                  width="45"
+                  height="16"
+                />
+              </a>
+            </div>
+
+            <nav class="footer__nav" role="navigation">
+              <ul class="footer__nav-list">
+                <li class="footer__nav-item">
+                  <a href="#hero" class="footer__nav-link">About us</a>
+                </li>
+                <li class="footer__nav-item">
+                  <a href="#started" class="footer__nav-link">Instructions</a>
+                </li>
+                <li class="footer__nav-item">
+                  <a href="#faq" class="footer__nav-link">Platforms</a>
+                </li>
+                <li class="footer__nav-item">
+                  <a href="#contact" class="footer__nav-link">Contact Us</a>
+                </li>
+                <li class="footer__nav-item">
+                  <a href="#signIn" class="footer__nav-link">Sign in</a>
+                </li>
+                <li class="footer__nav-item">
+                  <a href="#contact" class="footer__nav-link"
+                    >Sign up for free</a
+                  >
+                </li>
+              </ul>
+            </nav>
+
+            <div class="footer__info">
+              <div class="footer__info-block">
+                <h4 class="footer__info-title">
+                  Information and high risk warning:
+                </h4>
+                <p class="footer__info-text">
+                  Trading with foreign exchange (FX), contract for differences
+                  (CFDs) and precious metals carries a high level of risk that
+                  may not be suitable for all investors. Leverage creates
+                  additional risk and loss exposure. Before you decide to trade
+                  foreign exchange or contract for differences, carefully
+                  consider your investment objectives, experience level, and
+                  risk tolerance.
+                </p>
+              </div>
+
+              <div class="footer__info-block">
+                <h4 class="footer__info-title">Legal disclaimer:</h4>
+                <p class="footer__info-text">
+                  Forex trading entails significant risks and is not appropriate
+                  for all investors. The possibility of incurring substantial
+                  losses should be taken into account. It is therefore important
+                  to understand the possible consequences of investing. Traders
+                  should weigh their earning potential against the risks
+                  involved and act accordingly. Interactive Trade Ltd operating
+                  under brand and using domenLink domain within the European
+                  Economic Area.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="footer__bottom">
+            <p class="footer__copyright">Copyright 2020, All Right Reserved</p>
+            <ul class="footer__legal-list">
+              <li class="footer__legal-item">
+                <a href="#contact" class="footer__legal-link"
+                  >Terms and Conditions</a
+                >
+              </li>
+              <li class="footer__legal-item">
+                <a href="#contact" class="footer__legal-link">Privacy Policy</a>
+              </li>
+              <li class="footer__legal-item">
+                <a href="#contact" class="footer__legal-link">Risk Warnings</a>
+              </li>
+              <li class="footer__legal-item">
+                <a href="#contact" class="footer__legal-link"
+                  >Anti-Money Laundering</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

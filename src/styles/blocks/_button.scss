@@ -1,0 +1,24 @@
+@use '../helpers' as *;
+@use '../variables' as *;
+
+.button {
+  background-color: $violet;
+  font-weight: $fontWeightBold;
+  text-transform: uppercase;
+  text-align: center;
+  border-radius: 3.75rem;
+  color: $white;
+  @include transition(background-color $transitionDuration);
+  @include hover {
+    background-color: $violet-hover;
+  }
+
+  &:active {
+    background-color: $violet-50;
+  }
+
+  &:disabled {
+    color: $gray-100;
+    background-color: $gray-150;
+  }
+}

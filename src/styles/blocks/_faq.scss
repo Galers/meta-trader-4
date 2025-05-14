@@ -1,0 +1,169 @@
+@use '../helpers' as *;
+@use '../variables' as *;
+
+.faq {
+  margin-bottom: 5rem;
+
+  @include onTablet {
+    margin-bottom: 7.5rem;
+  }
+
+  @include onDesktop {
+    margin-bottom: 8.75rem;
+  }
+
+  &__container {
+    justify-content: center;
+    @include container;
+  }
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  &__title {
+    margin-bottom: 2.5rem;
+    max-width: 509px;
+
+    @include onTablet {
+      margin-bottom: 3.5rem;
+    }
+
+    @include onDesktop {
+      margin-bottom: 3.75rem;
+    }
+  }
+
+  &__highlight {
+    position: relative;
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 4px;
+      left: 0;
+      width: 195px;
+      height: 50px;
+      background: rgba($violet-00, 0.1);
+      z-index: -1;
+    }
+
+    @include onTablet {
+      &::after {
+        background: rgba($violet, 0.1);
+        top: 8px;
+        width: 263px;
+        height: 72px;
+      }
+    }
+  }
+
+  &__accordion {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    @include onTablet {
+      align-items: center;
+    }
+  }
+
+  &__item {
+    border: $border-00;
+    border-radius: 15px;
+    @include transition(background-color);
+    @include hover {
+      background-color: rgba($violet, 0.1);
+    }
+
+    @include onTablet {
+      border-color: $violet;
+      max-width: 688px;
+      width: 100%;
+    }
+
+    @include onDesktop {
+      max-width: 995px;
+    }
+  }
+
+  &__question {
+    text-align: start;
+  }
+
+  &__trigger {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 1rem;
+    width: 100%;
+    cursor: pointer;
+
+    @include onTablet {
+      padding-block: 2rem;
+      padding-inline: 2.5rem;
+    }
+  }
+
+  &__trigger[aria-expanded='true'] {
+    @include onTablet {
+      padding-block: 2rem 1.5rem;
+      padding-inline: 2.5rem;
+    }
+  }
+
+  &__icon {
+    position: relative;
+    display: inline-block;
+    width: 2rem;
+    height: 2rem;
+    transition: transform 0.2s ease;
+
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      width: 20px;
+      height: 2px;
+      background-color: $black;
+      transform-origin: center;
+      @include transition(transform 0.3s);
+    }
+    &::before {
+      transform: translate(-50%, -50%) rotate(0deg);
+    }
+
+    &::after {
+      transform: translate(-50%, -50%) rotate(90deg);
+    }
+  }
+
+  &__trigger[aria-expanded='true'] .faq__icon::before {
+    transform: translate(-50%, -50%) rotate(45deg);
+  }
+
+  &__trigger[aria-expanded='true'] .faq__icon::after {
+    transform: translate(-50%, -50%) rotate(-45deg);
+  }
+
+  &__panel {
+    font-family: var(--font-family-accent);
+    padding-block: 0 1.5rem;
+    padding-inline: 1rem 1.5rem;
+    color: $gray-50;
+    @include paragraph($text-16);
+
+    @include onTablet {
+      padding-bottom: 2rem;
+      padding-inline: 2.5rem 5.625rem;
+    }
+
+    @include onDesktop {
+      padding-right: 205px;
+    }
+  }
+}
