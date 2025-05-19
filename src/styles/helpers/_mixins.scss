@@ -37,6 +37,9 @@
 
   @include onDesktop {
     padding-inline: 120px;
+    margin: 0 auto;
+    min-width: 1440px;
+    max-width: 1440px;
   }
 }
 

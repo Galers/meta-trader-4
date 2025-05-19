@@ -4,10 +4,10 @@
 .testimonial {
   &__avatar {
     text-align: center;
-    margin-bottom: 1.5rem;
+    padding-bottom: 1.5rem;
 
     @include onTablet {
-      margin-bottom: 1rem;
+      padding-bottom: 1rem;
     }
 
     @include onDesktop {
@@ -17,7 +17,7 @@
       align-items: center;
       justify-content: start;
       column-gap: 1.875rem;
-      margin-bottom: 17px;
+      padding-bottom: 17px;
     }
 
     & .avatar__img {

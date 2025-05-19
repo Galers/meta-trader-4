@@ -2,14 +2,14 @@
 @use '../variables' as *;
 
 .faq {
-  margin-bottom: 5rem;
+  padding-bottom: 5rem;
 
   @include onTablet {
-    margin-bottom: 7.5rem;
+    padding-bottom: 7.5rem;
   }
 
   @include onDesktop {
-    margin-bottom: 8.75rem;
+    padding-bottom: 8.75rem;
   }
 
   &__container {

@@ -181,7 +181,7 @@
     @include onDesktop {
       display: flex;
       justify-content: space-between;
-      gap: 12rem;
+      width: 100%;
     }
   }
 

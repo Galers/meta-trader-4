@@ -2,14 +2,14 @@
 @use '../variables' as *;
 
 .slider {
-  margin-bottom: 5rem;
+  padding-bottom: 5rem;
 
   @include onTablet {
-    margin-bottom: 7.5rem;
+    padding-bottom: 7.5rem;
   }
 
   @include onDesktop {
-    margin-bottom: 8.75rem;
+    padding-bottom: 8.75rem;
   }
 
   &__container {
@@ -126,15 +126,18 @@
   &__list {
     display: grid;
     grid-template-columns: 1fr;
+    min-height: 370px;
 
     @include onTablet {
       width: 508px;
+      min-height: 365px;
       margin-inline: auto;
     }
 
     @include onDesktop {
       margin-top: 1.688rem;
       margin-inline: 0;
+      min-height: 236px;
     }
   }
 
